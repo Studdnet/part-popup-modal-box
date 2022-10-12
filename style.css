@@ -30,6 +30,23 @@ button:hover {
 	background: #265df2;
 }
 
+section.active .show-modal {
+	display: none;
+}
+
+section.active .overlay {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+section.active .modal-box {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+
+
 button.show-modal,
 .modal-box {
 	position: absolute;
@@ -59,6 +76,8 @@ button.show-modal,
 	padding: 30px 20px;
 	opacity: 0;
 	pointer-events: none;
+	transition: all 0.3s ease 0s;
+	transform: translate(-50%, -50%) scale(1.2);
 }
 
 .modal-box  i {
